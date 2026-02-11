@@ -71,3 +71,16 @@ h2 { color: #d6c9ff; font-size: 1.15rem; margin-top: 6px; margin-bottom: 12px; }
     .topnav { gap:8px; flex-wrap:wrap; }
     h1 { font-size: 1.8rem; }
 }
+
+.controls { margin-top: 14px; display:flex; gap:10px; justify-content:center; }
+.btn { background: linear-gradient(180deg,#6c4bff,#5b3be6); color: #fff; border: none; padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:600; }
+.btn:active { transform: translateY(1px); }
+.btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: #eae6ff; }
+.btn-link { background: transparent; border: none; color: #cfc7ff; text-decoration: underline; }
+
+.modal { position: fixed; inset: 0; display:none; align-items:center; justify-content:center; background: rgba(0,0,0,0.5); z-index:50; }
+.modal-content { background: #0e0e12; padding:18px; border-radius:10px; width: min(720px, 92%); border: 1px solid rgba(255,255,255,0.04); }
+.modal-content h3 { margin:0 0 8px 0; color:#e7dbff; }
+.modal-content p { margin:0 0 12px 0; color:#d7d0ff; font-size:0.95rem; }
+.modal-content textarea { width:100%; border-radius:8px; padding:10px; background:#0b0b0d; color:#f3f3f3; border:1px solid rgba(255,255,255,0.03); resize:vertical; }
+.modal-actions { display:flex; gap:8px; justify-content:flex-end; margin-top:10px; }

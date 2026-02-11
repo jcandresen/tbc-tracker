@@ -19,6 +19,10 @@
                 <a href="#p1-list">Phase 1</a>
                 <a href="#rep-list">Reputations</a>
             </nav>
+            <div class="controls">
+                <button id="btn-export" class="btn">Export checklist</button>
+                <button id="btn-import" class="btn btn-ghost">Import checklist</button>
+            </div>
         </header>
 
         <section id="pre-raid-list" class="section-card">
@@ -35,6 +39,19 @@
             <h2>Required Reputations</h2>
             <div class="checklist" id="rep-list-inner"></div>
         </section>
+    </div>
+
+    <div id="import-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <h3>Import checklist JSON</h3>
+            <p>Paste JSON exported from another device and click <strong>Import</strong>.</p>
+            <textarea id="import-text" rows="6" placeholder='{"item-24266":true,...}'></textarea>
+            <div class="modal-actions">
+                <button id="do-import" class="btn">Import</button>
+                <button id="copy-export" class="btn btn-ghost">Copy current export</button>
+                <button id="close-import" class="btn btn-link">Close</button>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
