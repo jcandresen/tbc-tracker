@@ -22,8 +22,13 @@ header {
     padding-bottom: 10px;
 }
 
-h1 { color: #b388ff; margin: 0; }
-h2 { color: #9575cd; font-size: 1.2rem; margin-top: 30px; border-bottom: 1px solid #333; }
+h1 { color: #b388ff; margin: 0; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+.subtitle { color: #cfc7ff; margin-top: 6px; font-size: 0.95rem; }
+.topnav { margin-top: 12px; display:flex; gap:12px; justify-content:center; }
+.topnav a { color: #ddd; text-decoration:none; padding:6px 10px; border-radius:8px; background: linear-gradient(180deg,#221b2b,#1b1422); border:1px solid rgba(255,255,255,0.03); font-weight:600; }
+.topnav a:hover { transform:translateY(-1px); box-shadow:0 6px 18px rgba(124,77,255,0.12); }
+
+h2 { color: #9575cd; font-size: 1.2rem; margin-top: 6px; margin-bottom: 12px; }
 
 .checklist-item {
     display: flex;
@@ -46,4 +51,15 @@ h2 { color: #9575cd; font-size: 1.2rem; margin-top: 30px; border-bottom: 1px sol
     font-weight: 600;
     display: flex;
     align-items: center;
+}
+
+.section-card { background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); padding:16px 20px; border-radius:10px; margin-bottom:18px; }
+.checklist-item input[type="checkbox"] { margin-right: 12px; width:18px; height:18px; }
+.item-label { color: #e6e6e6; cursor: pointer; }
+.item-label a { color: inherit; text-decoration:none; }
+.checklist-item.checked .item-label { text-decoration: line-through; opacity: 0.7; }
+
+@media (max-width:600px) {
+    .container { padding: 20px; }
+    .topnav { gap:8px; }
 }

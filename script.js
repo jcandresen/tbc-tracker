@@ -27,26 +27,43 @@ function renderList(listId, data, type) {
     data.forEach(item => {
         const div = document.createElement('div');
         div.className = 'checklist-item';
-        
+
         const storageKey = `${type}-${item.id}`;
         const isChecked = localStorage.getItem(storageKey) === 'true';
 
-        div.innerHTML = `
-            <input type="checkbox" id="${storageKey}" ${isChecked ? 'checked' : ''}>
-            <a href="https://www.wowhead.com/tbc/${type}=${item.id}">${item.name}</a>
-        `;
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.id = storageKey;
+        if (isChecked) input.checked = true;
 
-        // Add event listener to save progress
-        div.querySelector('input').addEventListener('change', (e) => {
+        const label = document.createElement('label');
+        label.htmlFor = storageKey;
+        label.className = 'item-label';
+
+        const link = document.createElement('a');
+        link.href = `https://www.wowhead.com/tbc/${type}=${item.id}`;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = item.name;
+
+        label.appendChild(link);
+
+        // Save progress and toggle visual state
+        input.addEventListener('change', (e) => {
             localStorage.setItem(storageKey, e.target.checked);
+            if (e.target.checked) div.classList.add('checked'); else div.classList.remove('checked');
         });
 
+        if (isChecked) div.classList.add('checked');
+
+        div.appendChild(input);
+        div.appendChild(label);
         container.appendChild(div);
     });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    renderList('pre-raid-list', preRaidItems, 'item');
-    renderList('p1-list', p1BisItems, 'item');
-    renderList('rep-list', reputations, 'faction');
+    renderList('pre-raid-list-inner', preRaidItems, 'item');
+    renderList('p1-list-inner', p1BisItems, 'item');
+    renderList('rep-list-inner', reputations, 'faction');
 });

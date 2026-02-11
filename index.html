@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shadow Priest Tracker</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
     <script src="https://wowjs.zamimg.com/js/tooltips.js"></script>
 </head>
@@ -13,22 +13,27 @@
     <div class="container">
         <header>
             <h1>Shadow Priest Progression</h1>
-            <p>TBC Anniversary Edition</p>
+            <p class="subtitle">TBC Anniversary Edition</p>
+            <nav class="topnav">
+                <a href="#pre-raid-list">Pre-Raid</a>
+                <a href="#p1-list">Phase 1</a>
+                <a href="#rep-list">Reputations</a>
+            </nav>
         </header>
 
-        <section id="pre-raid">
+        <section id="pre-raid-list" class="section-card">
             <h2>Pre-Raid BiS</h2>
-            <div class="checklist" id="pre-raid-list"></div>
+            <div class="checklist" id="pre-raid-list-inner"></div>
         </section>
 
-        <section id="p1-bis">
+        <section id="p1-list" class="section-card">
             <h2>Phase 1 BiS (Raids)</h2>
-            <div class="checklist" id="p1-list"></div>
+            <div class="checklist" id="p1-list-inner"></div>
         </section>
 
-        <section id="reputation">
+        <section id="rep-list" class="section-card">
             <h2>Required Reputations</h2>
-            <div class="checklist" id="rep-list"></div>
+            <div class="checklist" id="rep-list-inner"></div>
         </section>
     </div>
     <script src="script.js"></script>
