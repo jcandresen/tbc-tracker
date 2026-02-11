@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TBC Shadow Priest Tracker</title>
+    <title>Shadow Priest Tracker</title>
     <link rel="stylesheet" href="style.css">
+    
     <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
     <script src="https://wowjs.zamimg.com/js/tooltips.js"></script>
 </head>
@@ -15,16 +16,19 @@
             <p>TBC Anniversary Edition</p>
         </header>
 
-        <section id="gear">
-            <h2>Essential Gear</h2>
-            <div class="checklist" id="gear-list">
-                </div>
+        <section id="pre-raid">
+            <h2>Pre-Raid BiS</h2>
+            <div class="checklist" id="pre-raid-list"></div>
+        </section>
+
+        <section id="p1-bis">
+            <h2>Phase 1 BiS (Raids)</h2>
+            <div class="checklist" id="p1-list"></div>
         </section>
 
         <section id="reputation">
             <h2>Required Reputations</h2>
-            <div class="checklist" id="rep-list">
-                </div>
+            <div class="checklist" id="rep-list"></div>
         </section>
     </div>
     <script src="script.js"></script>

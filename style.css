@@ -1,43 +1,49 @@
 body {
-    background-color: #1a1a1a;
+    background-color: #121212;
     color: #e0e0e0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
 }
 
 .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #262626;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    max-width: 700px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
 }
 
 header {
     text-align: center;
-    border-bottom: 2px solid #4a148c; /* Shadowy Purple */
-    margin-bottom: 20px;
+    border-bottom: 2px solid #4a148c;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
 }
 
-h1 { color: #b388ff; }
+h1 { color: #b388ff; margin: 0; }
+h2 { color: #9575cd; font-size: 1.2rem; margin-top: 30px; border-bottom: 1px solid #333; }
 
 .checklist-item {
     display: flex;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #333;
+    padding: 12px 0;
+    border-bottom: 1px solid #2a2a2a;
 }
-
-.checklist-item:last-child { border-bottom: none; }
 
 .checklist-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
     margin-right: 15px;
-    transform: scale(1.5);
     cursor: pointer;
+    accent-color: #7e57c2;
 }
 
-a { 
-    text-decoration: none; 
-    font-weight: bold;
+/* Fix Wowhead link padding for icons */
+.checklist-item a {
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
 }
